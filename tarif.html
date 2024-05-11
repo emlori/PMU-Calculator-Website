@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>BetHorse</title>
+    <link rel="icon" href="img/icone_chev.png">
+    <link href="pricing.css" rel="stylesheet" type="text/css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/pricing/">
+    <script type="text/javascript" src="calcul.js"></script>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <!--<script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/popper.js"></script>-->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="https://pagecdn.io/lib/mathjs/10.4.0/math.min.js" crossorigin="anonymous"  ></script>
+  
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="pricing.css" rel="stylesheet">
+  </head><header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">BetHorse</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Parier</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="repartiteur.html">Répartir sa mise</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="optimisation.html">Choisir son gain</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="tarif.html">Tarifs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="fonctionnement.html">Comment ça marche ?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.php">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <body>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check" viewBox="0 0 16 16">
+    <title>Check</title>
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+  </symbol>
+</svg>
+
+<div class="container py-3">
+
+
+  <main>
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">Tarifs</h1>
+      <p class="fs-5 text-muted">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Gratuit</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">0&#x20AC;<small class="text-muted fw-light">/mois</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Répartiteur de mise</li>
+              <li>Accès au centre d'aide</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Commencer gratuitement</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Pro</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">2,5&#x20AC;<small class="text-muted fw-light">/mois</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Répartiteur de mise</li>
+              <li>Opimisateur de mise avancé</li>
+              <li>Guide d'utilisation des outils</li>
+              <li>Priorité de réponse aux mails</li>
+              <li>Accès au centre d'aide</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Commencer</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-white bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Premium</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">4&#x20AC;<small class="text-muted fw-light">/mois</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Répartiteur de mise</li>
+              <li>Répartiteur avancé</li>
+              <li>Guide d'utilisation des outils</li>
+              <li>Accès à l'ensemble de la base de données</li>
+              <li>Graphiques personnalisable pour de l'aide à la décision sur mesure</li>
+              <li>Accès à un panel de vidéos explicatives sur les outils et leur utilisation</li>
+              <li>Priorité de réponse aux mails</li>
+              <li>Accès au centre d'aide</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Commencer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+  </body>
+</html>

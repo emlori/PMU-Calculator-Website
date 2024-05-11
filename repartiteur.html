@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>BetHorse</title>
+    <link rel="icon" href="img/icone_chev.png">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="calcul.js"></script>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <!--<script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/popper.js"></script>-->
+    <script src="./js/bootstrap.min.js"></script>
+  </head>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">BetHorse</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Parier</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="repartiteur.html">Répartir sa mise</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="optimisation.html">Choisir son gain</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="tarif.html">Tarifs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="fonctionnement.html">Comment ça marche ?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.php">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <body class="container-fluid">
+      <h1 align="middle">Répartiteur de mise</h1>
+      <section>
+        <table>
+          <tr>
+            <th>Mise totale à répartir</th>
+          </tr>
+          <tr>
+            <td>
+              <input id="misetot" type="number" placeholder="Votre mise total pour la course ici" min="0" default="0" id="misetot">
+            </td>
+          </tr>
+        </table>
+        
+      </section>
+      <hr/> 
+      <section>
+      <table>
+        <tr>
+          <th>Recette</th>
+          <th>Gain net</th>
+          <th>Coef multiplicateur</th>
+        </tr>
+        <tr>
+          <td><input type="text" readonly id="recette"  disabled></td>
+          <td><input type="text" readonly id="gain"  disabled></td>
+          <td><input type="text" readonly id="coefmulti"  disabled></td>
+        </tr>
+      
+      <form name="form">
+     
+        <tr>
+                <th>N° cheval</th>
+                <th>Cote</th>
+                <th>Mise</th>
+        </tr>
+        <tr>
+          <td><input type="number" placeholder="Entrez le n° du cheval" min="0" default="0" name="num[]"/></td>
+          <td><input type="number" placeholder="Ici sa cote" min="0" default="0" name="c[]" id="coteid[0]"/></td>
+          <td><input type="text" readonly id="tableIdOutput[0]"  disabled></td>
+
+        </tr>
+        <tr>
+          <td><input type="number" placeholder="Entrez le n° du cheval" min="0" default="0" name="num[]"/></td>
+          <td><input type="number" placeholder="Ici sa cote" min="0" default="0" name="c[]" id="coteid[1]"/></td>
+          <td><input type="text" readonly id="tableIdOutput[1]"  disabled></td>
+        </tr>
+        <tr>
+          <td><input type="number" placeholder="Entrez le n° du cheval" min="0" default="0" name="num[]"/></td>
+          <td><input type="number" placeholder="Ici sa cote" min="0" default="0" name="c[]" id="coteid[2]"/></td>
+          <td><input type="text" readonly id="tableIdOutput[2]"  disabled></td>
+
+        </tr>
+        <tr>
+          <td><input type="number" placeholder="Entrez le n° du cheval" min="0" default="0" name="num[]"/></td>
+          <td><input type="number" placeholder="Ici sa cote" min="0" default="0" name="c[]" id="coteid[3]"/></td>
+          <td><input type="text" readonly id="tableIdOutput[3]"  disabled></td>
+        </tr>
+        <tr>
+          <td><input type="number" placeholder="Entrez le n° du cheval" min="0" default="0" name="num[]"/></td>
+          <td><input type="number" placeholder="Ici sa cote" min="0" default="0" name="c[]" id="coteid[4]"/></td>
+          <td><input type="text" readonly id="tableIdOutput[4]"  disabled></td>
+        </tr>
+        <tr>
+          <td><input type="number" placeholder="Entrez le n° du cheval" min="0" default="0" name="num[]"/></td>
+          <td><input type="number" placeholder="Ici sa cote" min="0" default="0" name="c[]" id="coteid[5]"/></td>
+          <td><input type="text" readonly id="tableIdOutput[5]"  disabled></td>
+
+        </tr>
+        <tr>
+          <td><input type="number" placeholder="Entrez le n° du cheval" min="0" default="0" name="num[]"/></td>
+          <td><input type="number" placeholder="Ici sa cote" min="0" default="0" name="c[]" id="coteid[6]"/></td>
+          <td><input type="text" readonly id="tableIdOutput[6]"  disabled></td>
+        </tr>
+        <tr>
+          <td><input type="number" placeholder="Entrez le n° du cheval" min="0" default="0" name="num[]"/></td>
+          <td><input type="number" placeholder="Ici sa cote" min="0" default="0" name="c[]" id="coteid[7]"/></td>
+          <td><input type="text" readonly id="tableIdOutput[7]"  disabled></td>
+
+        </tr>
+        <tr>
+          <td><input type="number" placeholder="Entrez le n° du cheval" min="0" default="0" name="num[]"/></td>
+          <td><input type="number" placeholder="Ici sa cote" min="0" default="0" name="c[]" id="coteid[8]"/></td>
+          <td><input type="text" readonly id="tableIdOutput[8]"  disabled></td>
+        </tr>
+        <tr>
+          <td><input type="number" placeholder="Entrez le n° du cheval" min="0" default="0" name="num[]"/></td>
+          <td><input type="number" placeholder="Ici sa cote" min="0" default="0" name="c[]" id="coteid[9]"/></td>
+          <td><input type="text" readonly id="tableIdOutput[9]"  disabled></td>
+        </tr>
+        
+    </table>
+  </section>
+  </form>   
+    </div>
+    <div id="validerB">
+      <button class="button button1" onClick="calculmise()">Valider</button>
+      <button class="button button2" onclick="effacer()">Effacer</button>
+    </div>
+
+  </body>
+
+  <div class="container">
+
+    <footer class="bg-dark text-center text-white">
+      <p>
+        BetHorse.eu est un site de conseils sur les courses hippiques, mais pas un site de paris en ligne. Les mises et les jeux indiqués sur ce site sont donnés à titre informatifs et à aucun moment nous conseillons de miser les sommes indiquées, surtout sans trésorerie consacrée aux paris hippiques (appelé fond de roulement). Les courses restent un jeu de hasard !
+        </p>
+        <p>
+        Jouez aux courses avec modération, sans pulsion et en engageant seulement les sommes que vous êtes absolument disposer à perdre. En cas de dépendance aux jeux dargent, nous vous conseillons de prendre contact avec une association comme SOS JOUEURS : http://www.sosjoueurs.org
+      </p>
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Form -->
+      <section class="">
+        <form action="">
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong>S'inscrire à notre newsletter</strong>
+              </p>
+            </div>
+            <!--Grid column-->
+  
+            <!--Grid column-->
+            <div class="col-md-5 col-12">
+              <!-- Email input -->
+              <div class="form-outline form-white mb-4">
+                <input type="email" id="form5Example2" class="form-control" />
+                <label class="form-label" for="form5Example2">Adresse mail</label>
+              </div>
+            </div>
+            <!--Grid column-->
+  
+            <!--Grid column-->
+            <div class="col-auto">
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-outline-light mb-4">
+                M'inscrire
+              </button>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </section>
+
+      <!-- Section: Form -->
+      
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3">
+      © 2020 Copyright:
+      <a class="text-white" href="http://bethorse.eu/">BetHorse.eu</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+    
+  </div>
+  
+</html>
+
+
